@@ -1,0 +1,21 @@
+Package: PairReviewR
+Title: Compiles Decisions from Independent Article Reiewers
+Version: 1.1.2
+Authors@R: c(
+    person("Emmanuel", "Adeyemo", email = "eadeyemo2@gmail.com", role = c("cre", "aut")),
+    person("Kelechi", "Igwe", email = "kelechi@ksu.edu", role = "aut"))
+Description: You go see am yourself
+License: `use_mit_license()`
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Depends: 
+    R (>= 2.10)
+LazyData: true
+Imports:
+    dplyr,
+    janitor,
+    glue
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
