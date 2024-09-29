@@ -8,12 +8,12 @@ process_files = function(df1, df2, sort_by_column = 'label', compare_column = 's
 
   sort_by_column = tolower(sort_by_column)
 
-  if(compare_column %nin% names(dta_one) | compare_column %nin% names(dta_two))stop(glue::glue('{compare_column} not present in one or both files'))
+  if(compare_column %nin% names(df1) | compare_column %nin% names(df2))stop(glue::glue('{compare_column} not present in one or both files'))
 
-  if(sort_by_column %nin% names(dta_one) | sort_by_column %nin% names(dta_two))stop(glue::glue('{sort_by_column} not present in one or both files'))
+  if(sort_by_column %nin% names(df1) | sort_by_column %nin% names(df2))stop(glue::glue('{sort_by_column} not present in one or both files'))
 
-  dta_one_sort = dta_one %>% dplyr::arrange_at(all_of(sort_by_column))
-  dta_two_sort = dta_two %>% dplyr::arrange_at(all_of(sort_by_column))
+  dta_one_sort = df1 %>% dplyr::arrange_at(all_of(sort_by_column))
+  dta_two_sort = df2 %>% dplyr::arrange_at(all_of(sort_by_column))
 
 
 
