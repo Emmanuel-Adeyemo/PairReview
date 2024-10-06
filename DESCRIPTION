@@ -1,6 +1,6 @@
 Package: PairReviewR
 Title: Compiles Decisions from Independent Article Reiewers
-Version: 1.1.2
+Version: 1.1.3
 Authors@R: c(
     person("Emmanuel", "Adeyemo", email = "eadeyemo2@gmail.com", role = c("cre", "aut")),
     person("Kelechi", "Igwe", email = "kelechi@ksu.edu", role = "aut"))
@@ -15,7 +15,9 @@ LazyData: true
 Imports:
     dplyr,
     janitor,
-    glue
+    glue,
+    scales,
+    ggplot2
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3

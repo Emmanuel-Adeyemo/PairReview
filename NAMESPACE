@@ -2,3 +2,4 @@
 
 export(both_selected)
 export(get_conflict)
+export(plot_core_articles)
