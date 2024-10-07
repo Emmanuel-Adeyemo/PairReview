@@ -1,8 +1,4 @@
 
-
-
-
-
 # Function to clean strings
 clean_string = function(x) {
   gsub("[{}]", "", x)
@@ -75,7 +71,8 @@ csv2bibtex = function(csv_df, save_name){
 
   # Save to a .bib file
   writeLines(bibtex_entries, final_name, useBytes = TRUE)
-
+  
+  # put some output on the console to tell user where file is saved. Read couple lines of the saved file.
   cat(crayon::blue(glue::glue('BibTex file: {final_name} created and saved in {getwd()}. \n\n')))
 
   cat(crayon::blue("First two bibTeX entries with abstracts:\n"))
